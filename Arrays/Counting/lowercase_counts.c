@@ -15,6 +15,9 @@ void main()
         // Can use the below printout the see the decimal value and char
         //printf("%%i: %i\t %%c: %c\n", arr[i], arr[i]);
         count[arr[i]-97]++;
+        /* Could also use 
+        count[arr[i]-'a']++;
+        */
     }
 
     for (int j = 0; j < ALPHA; j++)
