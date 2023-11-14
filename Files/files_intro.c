@@ -23,16 +23,24 @@ void main()
      * r - reading
      * a - appending. If doesn't exist, file will be created
      */
-    fp = fopen();
+    fp = fopen("testFile.txt", "w");
+    // If different directory: "C:Users/" etc etc
 
     // Step 3: Make sure the open was successfull
     // Check to see if it failed - check for error codes
     // Null if nothing was returned
-    if (fp!=NULL) 
 
-    // Step 4: Code here to do some stuff
+    if (fp==NULL) // Could also be 'if (!fp)'
+    {
+        printf("File not found.\n");
+    }
+    else
+    {
+        printf("File has been opened for writing.\n");
 
+        // Step 4: Code here to do some stuff
 
-    // Step 5: After usage, close the stream (close the file)
-    fclose(fp);
+        // Step 5: After usage, close the stream (close the file)
+        fclose(fp);
+    }
 }
