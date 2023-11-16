@@ -5,6 +5,11 @@
 // fputs(<string>, <pointer to a file>)
 // fgets(<string>, <int/length limit>, <pointer to a file>)
 
+// Note - EOF is the end of file character
+// In a string, the \0 to end the string is stored with it
+// The EOF is not stored at the end of the file. Its just an
+// indicator to a lower-level system that the file has ended
+
 void main()
 {
     FILE* fp;
@@ -35,6 +40,13 @@ void main()
         {
             printf("string #%d read: %s\n", ++count, myString);
         }
+
+        // feof is a function that looks to see if its at the end of a file
+        /* An example usage:
+        while(!feof(fp))
+            //perform some code        
+        */
+
         // fgets will read until the \n and then adds a \0 to the end
         fclose(fp);
     }
