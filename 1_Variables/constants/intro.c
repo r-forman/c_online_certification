@@ -1,4 +1,6 @@
-
+// To compile:
+// gcc ./intro.c -o intro
+// Note: Compiling via g++ for C++ will fail
 
 #include <stdio.h>
 
@@ -33,5 +35,5 @@ void main()
     const int *const ptr3;
     // Constant pointer to constant integer
     // Neither can be changed - both are constants!
-    
+
 }
